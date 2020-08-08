@@ -1,0 +1,231 @@
+<html>
+ <head></head>
+ <body>
+  /* First Programme in C */ #include
+  <stdio.h>
+    int main() { printf("Hello world!"); return 0; } /*Variable Declaration */ #include 
+   <stdio.h>
+     // Variable declaration: extern int a, b; extern int c; extern float f; int main () { /* variable definition: */ int a, b; int c; float f; /* actual initialization */ a = 10; b = 20; c = a + b; printf("value of c : %d \n", c); f = 70.0/3.0; printf("value of f : %f \n", f); return 0; } 85 /* decimal */ 0213 /* octal */ 0x4b /* hexadecimal */ 30 /* int */ 30u /* unsigned int */ 30l /* long */ 30ul /* unsigned long */ #include 
+    <stdio.h>
+      #define LENGTH 10 #define WIDTH 5 #define NEWLINE '\n' int main() { int area; area = LENGTH * WIDTH; printf("value of area : %d", area); printf("%c", NEWLINE); return 0; } /* If */ #include 
+     <stdio.h>
+       int main() { int score = 89; if (score &gt; 75) printf("You passed.\n"); return 0; } /* If - Else */ #include 
+      <stdio.h>
+        int main() { int score = 89; if (score &gt;= 90) printf("Top 10%%.\n"); else printf("Less than 90.\n"); return 0; } #include 
+       <stdio.h>
+         int main() { int y; int x = 3; y = (x &gt;= 5) ? 5 : x; /* This is equivalent to: if (x &gt;= 5) y = 5; else y = x; */ return 0; } /* Logical Operator With Conditions */ #include
+        <stdio.h>
+          int main() { int n = 1; if (n &gt; 0 &amp;&amp; n &lt;= 100) printf("Range (1 - 100).\n"); if (n == 999 || (n &gt; 0 &amp;&amp; n &lt;= 100)) printf("Input valid.\n"); if (n == 'x' || n == 'X') printf("Roman numeral value 10.\n"); if (!(n == 'x' || n == 'X')) printf("Roman numeral is not 10.\n"); return 0; } /* Switch */ #include
+         <stdio.h>
+           int main() { int num = 3; switch (num) { case 1: printf("One\n"); break; case 2: printf("Two\n"); break; case 3: printf("Three\n"); break; default: printf("Not 1, 2, or 3.\n"); } return 0; } #include
+          <stdio.h>
+            int main() { int num = 1; switch (num) { case 1: case 2: case 3: printf("One, Two, or Three.\n"); break; case 4: case 5: case 6: printf("Four, Five, or Six.\n"); break; default: printf("Greater than Six.\n"); } return 0; } /* While Loops */ #include 
+           <stdio.h>
+             int main() { int count = 1; while (count &lt; 11) { printf("Count = %d\n", count); count++; } return 0; } /* Do While Loops */ #include 
+            <stdio.h>
+              int main() { int count = 1; do { printf("Count = %d\n", count); cou nt++; } while (count &lt; 11); return 0; } /* Break 💕❤💞 Continue */ #include
+             <stdio.h>
+               int main() { int num = 5; while (num &gt; 0) { if (num == 3) break; printf("%d\n", num); num--; } int sum = 5; while (sum &gt; 0) { sum--; if (sum == 3) continue; printf("%d\n", sum); } return 0; } /* Multiplication Table */ #include
+              <stdio.h>
+                int main() { int i, j; int table = 10; int max = 12; for (i = 1; i &lt;= table; i++) { for (j = 0; j &lt;= max; j++) { printf("%d x %d = %d\n", i, j, i*j); } printf("\n"); /* blank line between tables */ } return 0; } /* Basic For Loops */ #include
+               <stdio.h>
+                 int main() { int i; int max = 10; for (i = 0; i &lt; max; i++) { printf("%d\n", i); } return 0; } /* Infinity loops /* #include 
+                <stdio.h>
+                  int main () { for( ; ; ) { printf("This loop will run forever.\n"); } return 0; } /* Basic Functions */ /* Functions Parameters */ #include 
+                 <stdio.h>
+                   int sum_up (int x, int y); int main() { int x, y, result; x = 3; y = 12; result = sum_up(x, y); printf("%d + %d = %d", x, y, result); return 0; } int sum_up (int x, int y) { x += y; return(x); } #include 
+                  <stdio.h>
+                    /* declaration */ int square (int num); int main() { int x, result; printf("Enter a Integer Number : "); scanf("%d",&amp;x); result = square(x); printf("%d squared is %d\n", x, result); return 0; } /* definition */ int square (int num) { int y; y = num * num; return(y); } #include
+                   <stdio.h>
+                     /* function declaration */ int max(int num1, int num2); int main () { /* local variable definition */ int a = 100; int b = 200; int ret; /* calling a function to get max value */ ret = max(a, b); printf( "Max value is : %d\n", ret ); return 0; } /* function returning the max between two numbers */ int max(int num1, int num2) { /* local variable declaration */ int result; if (num1 &gt; num2) result = num1; else result = num2; return result; } /* Variable Scope */ #include 
+                    <stdio.h>
+                      int global1 = 0; int main() { int local1, local2; local1 = 5; local2 = 10; global1 = local1 + local2; printf("%d \n", global1); /* 15 */ return 0; } /* Static Variables */ #include 
+                     <stdio.h>
+                       void say_hello(); int main() { int i; for (i = 0; i &lt; 5; i++) { say_hello(); } return 0; } void say_hello() { static int num_calls = 1; printf("Hello number %d\n", num_calls); num_calls++; } /* Recursive Functions /* #include 
+                      <stdio.h>
+                        //function declaration int factorial(int num); int main() { int x = 5; printf("The factorial of %d is %d\n", x, factorial(x)); return 0; } //function definition int factorial(int num) { if (num == 1) /* base case */ return (1); else return (num * factorial(num - 1)); } /* Local Scope */ #include 
+                       <stdio.h>
+                         int main () { /* local variable declaration */ int a, b; int c; /* actual initialization */ a = 10; b = 20; c = a + b; printf ("value of a = %d, b = %d and c = %d\n", a, b, c); return 0; } /* Global Variable */ #include 
+                        <stdio.h>
+                          /* global variable declaration */ int g; int main () { /* local variable declaration */ int a, b; /* actual initialization */ a = 10; b = 20; g = a + b; printf ("value of a = %d, b = %d and g = %d\n", a, b, g); return 0; } #include 
+                         <stdio.h>
+                           /* global variable declaration */ int g = 20; int main () { /* local variable declaration */ int g = 10; printf ("value of g = %d\n", g); return 0; } /* Arrays /* #include
+                          <stdio.h>
+                            int main() { printf("Hello world!"); float purchases[3] = {10.99, 14.25, 90.50}; float total = 0; int k; /* total the purchases */ for (k = 0; k &lt; 3; k++) { total += purchases[k]; } printf("Purchases total is %6.2f\n", total); /* Output: Purchases total is 115.74 */ return 0; } /* Arrays Play /* #include
+                           <stdio.h>
+                             int main() { printf("Hello world!"); int b[10]; int k; for (k = 0; k &lt; 10; k++) { b[k] = k * 10; printf("%d\n",k); } int x[5] = {20, 45, 16, 18, 22}; x[1] = 260; printf("The second element is %d\n", x[1]); /* 260 */ int a[2][3] = { {3, 2, 6}, {4, 5, 20} }; printf("Element 3 in row 2 is %d\n", a[1][2]); /* 20 */ a[1][2] = 25; printf("Element 3 in row 2 is %d\n", a[1][2]); /* 25 */ return 0; } #include
+                            <stdio.h>
+                              int main() { int a[2][3] = { {3, 2, 6}, {4, 5, 20} }; int k, j; /* display array contents */ for (k = 0; k &lt; 2; k++) { for (j = 0; j &lt; 3; j++) { printf(" %d", a[k][j]); } printf("\n"); } return 0; } #include 
+                             <stdio.h>
+                               int main () { int n[ 10 ]; /* n is an array of 10 integers */ int i,j; /* initialize elements of array n to 0 */ for ( i = 0; i &lt; 10; i++ ) { n[ i ] = i + 100; /* set element at location i to i + 100 */ } /* output each array element's value */ for (j = 0; j &lt; 10; j++ ) { printf("Element[%d] = %d\n", j, n[j] ); } return 0; } /* Pointers */ #include 
+                              <stdio.h>
+                                int main () { int var1; char var2[10]; printf("Address of var1 variable: %x\n", &amp;var1 ); printf("Address of var2 variable: %x\n", &amp;var2 ); return 0; } int *ip; /* pointer to an integer */ double *dp; /* pointer to a double */ float *fp; /* pointer to a float */ char *ch /* pointer to a character */ #include 
+                               <stdio.h>
+                                 int main () { int var = 20; /* actual variable declaration */ int *ip; /* pointer variable declaration */ ip = &amp;var; /* store address of var in pointer variable*/ printf("Address of var variable: %x\n", &amp;var ); /* address stored in pointer variable */ printf("Address stored in ip variable: %x\n", ip ); /* access the value using the pointer */ printf("Value of *ip variable: %d\n", *ip ); return 0; } #include 
+                                <stdio.h>
+                                  int main () { int *ptr = NULL; printf("The value of ptr is : %x\n", ptr ); return 0; } #include
+                                 <stdio.h>
+                                   void test(int k); int main() { int i = 0; printf("The address of i is %x\n", &amp;i); test(i); printf("The address of i is %x\n", &amp;i); test(i); return 0; } void test(int k) { printf("The address of k is %x\n", &amp;k); } #include
+                                  <stdio.h>
+                                    int main() { int j = 63; int *p = NULL; p = &amp;j; printf("The address of j is %x\n", &amp;j); printf("p contains address %x\n", p); printf("The value of j is %d\n", j); printf("p is pointing to the value %d\n", *p); return 0; } #include
+                                   <stdio.h>
+                                     int main() { int x = 5; int y; int *p = NULL; p = &amp;x; y = *p + 2; /* y is assigned 7 */ y += *p; /* y is assigned 12 */ *p = y; /* x is assigned 12 */ (*p)++; /* x is incremented to 13 */ printf("p is pointing to the value %d\n", *p); return 0; } /* Arrays and Pointers */ #include
+                                    <stdio.h>
+                                      int main() { printf("Hello world!\n"); int a[5] = {22, 33, 44, 55, 66}; int *ptr = NULL; int i; ptr = a; for (i = 0; i &lt; 5; i++) { printf("%d ", *(ptr + i)); } return 0; } #include
+                                     <stdio.h>
+                                       int main() { int a[5] = {22, 33, 44, 55, 66}; int *ptr = NULL; ptr = a; /* point to the first array element */ printf("%d %x\n", *ptr, ptr); /* 22 */ ptr++; printf("%d %x\n", *ptr, ptr); /* 33 */ ptr += 3; printf("%d %x\n", *ptr, ptr); /* 66 */ ptr--; printf("%d %x\n", *ptr, ptr); /* 55 */ ptr -= 2; printf("%d %x\n", *ptr, ptr); /* 33 */ return 0; } /* Swap /* #include
+                                      <stdio.h>
+                                        void swap (int *num1, int *num2); int main() { int x = 25; int y = 100; printf("x is %d, y is %d\n", x, y); swap(&amp;x, &amp;y); printf("x is %d, y is %d\n", x, y); return 0; } void swap (int *num1, int *num2) { int temp; temp = *num1; *num1 = *num2; *num2 = temp; } #include
+                                       <stdio.h>
+                                         int * get_evens(); int main() { int *a; int k; a = get_evens(); /* get first 5 even numbers */ for (k = 0; k &lt; 5; k++) printf("%d\n", a[k]); return 0; } int * get_evens() { static int nums[5]; int k; int even = 0; for (k = 0; k &lt; 5; k++) { nums[k] = even += 2; } return (nums); } /* String */ #include 
+                                        <stdio.h>
+                                          int main () { char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; printf("Greeting message: %s\n", greeting ); return 0; } #include 
+                                         <stdio.h>
+                                           #include 
+                                          <string.h>
+                                            int main () { char str1[12] = "Hello"; char str2[12] = "World"; char str3[12]; int len ; /* copy str1 into str3 */ strcpy(str3, str1); printf("strcpy( str3, str1) : %s\n", str3 ); /* concatenates str1 and str2 */ strcat( str1, str2); printf("strcat( str1, str2): %s\n", str1 ); /* total lenghth of str1 after concatenation */ len = strlen(str1); printf("strlen(str1) : %d\n", len ); return 0; } #include
+                                           <stdio.h>
+                                             int main() { printf("Hello world!"); char first_name[25]; int age; printf("Enter your first name and age: \n"); scanf("%s %d", first_name, &amp;age); char full_name[50]; printf("Enter your full name: "); gets(full_name); char full_another_name[50]; printf("Enter your full name: "); fgets(full_name, 50, stdin); return 0; } #include 
+                                            <stdio.h>
+                                              int main() { char city[40]; printf("Enter your favorite city: "); gets(city); // Note: for safety, use // fgets(city, 40, stdin); fputs(city, stdout); printf(" is a fun city."); return 0; } #include 
+                                             <stdio.h>
+                                               int main() { char city[40]; printf("Enter your favorite city: "); gets(city); // Note: for safety, use // fgets(city, 40, stdin); puts(city); return 0; } /* String Functions */ #include 
+                                              <stdio.h>
+                                                int main() { char info[100]; char dept[ ] = "HR"; int emp = 75; sprintf(info, "The %s dept has %d employees.", dept, emp); printf("%s\n", info); return 0; } #include 
+                                               <stdio.h>
+                                                 int main() { char info[ ] = "Snoqualmie WA 13190"; char city[50]; char state[50]; int population; sscanf(info, "%s %s %d", city, state, &amp;population); printf("%d people live in %s, %s.", population, city, state); return 0; } #include 
+                                                <stdio.h>
+                                                  #include 
+                                                 <string.h>
+                                                   int main() { char s1[ ] = "The grey fox"; char s2[ ] = " jumped."; strcat(s1, s2); printf("%s\n", s1); printf("Length of s1 is %d\n", strlen(s1)); strcpy(s1, s2); printf("s1 is now %s \n", s1); return 0; } #include 
+                                                  <stdio.h>
+                                                    int main() { char input[10]; int num; printf("Enter a number: "); gets(input); num = atoi(input); return 0; } /* Functions Pointers */ #include 
+                                                   <stdio.h>
+                                                     void say_hello(int num_times); /* function */ int main() { void (*funptr)(int); /* function pointer */ funptr = say_hello; /* pointer assignment */ funptr(3); /* function call */ return 0; } void say_hello(int num_times) { int k; for (k = 0; k &lt; num_times; k++) printf("Hello\n"); } #include 
+                                                    <stdio.h>
+                                                      int add(int num1, int num2); int subtract(int num1, int num2); int multiply(int num1, int num2); int divide(int num1, int num2); int main() { int x, y, choice, result; int (*op[4])(int, int); op[0] = add; op[1] = subtract; op[2] = multiply; op[3] = divide; printf("Enter two integers: "); scanf("%d%d", &amp;x, &amp;y); printf("Enter 0 to add, 1 to subtract, 2 to multiply, or 3 to divide: "); scanf("%d", &amp;choice); result = op[choice](x, y); printf("%d", result); return 0; } int add(int x, int y) { return(x + y); } int subtract(int x, int y) { return(x - y); } int multiply(int x, int y) { return(x * y); } int divide(int x, int y) { if (y != 0) return (x / y); else return 0; } /* Structure */ struct student { int age; int grade; char name[40]; }; /* declare two variables */ struct student s1; struct student s2; #include 
+                                                     <stdio.h>
+                                                       #include 
+                                                      <string.h>
+                                                        struct course { int id; char title[40]; float hours; }; int main() { struct course cs1 = {341279, "Intro to C++", 12.5}; struct course cs2; /* initialize cs2 */ cs2.id = 341281; strcpy(cs2.title, "Advanced C++"); cs2.hours = 14.25; /* display course info */ printf("%d\t%s\t%4.2f\n", cs1.id, cs1.title, cs1.hours); printf("%d\t%s\t%4.2f\n", cs2.id, cs2.title, cs2.hours); return 0; } #include 
+                                                       <stdio.h>
+                                                         #include 
+                                                        <string.h>
+                                                          struct Books { char title[50]; char author[50]; char subject[100]; int book_id; }; /* function declaration */ void printBook( struct Books book ); int main( ) { struct Books Book1; /* Declare Book1 of type Book */ struct Books Book2; /* Declare Book2 of type Book */ /* book 1 specification */ strcpy( Book1.title, "C Programming"); strcpy( Book1.author, "Nuha Ali"); strcpy( Book1.subject, "C Programming Tutorial"); Book1.book_id = 6495407; /* book 2 specification */ strcpy( Book2.title, "Telecom Billing"); strcpy( Book2.author, "Zara Ali"); strcpy( Book2.subject, "Telecom Billing Tutorial"); Book2.book_id = 6495700; /* print Book1 info */ printBook( Book1 ); /* Print Book2 info */ printBook( Book2 ); return 0; } void printBook( struct Books book ) { printf( "Book title : %s\n", book.title); printf( "Book author : %s\n", book.author); printf( "Book subject : %s\n", book.subject); printf( "Book book_id : %d\n", book.book_id); } /* Unions */ union val { int int_num; float fl_num; char str[20]; }; union val u1; union val u2; u2 = u1; 
+                                                         <stdio.h>
+                                                           #include 
+                                                          <string.h>
+                                                            union Data { int i; float f; char str[20]; }; int main( ) { union Data data; printf( "Memory size occupied by data : %d\n", sizeof(data)); return 0; } 
+                                                           <stdio.h>
+                                                             #include 
+                                                            <string.h>
+                                                              union Data { int i; float f; char str[20]; }; int main( ) { union Data data; data.i = 10; data.f = 220.5; strcpy( data.str, "C Programming"); printf( "data.i : %d\n", data.i); printf( "data.f : %f\n", data.f); printf( "data.str : %s\n", data.str); return 0; } #include 
+                                                             <string.h>
+                                                               union Data { int i; float f; char str[20]; }; int main( ) { union Data data; data.i = 10; printf( "data.i : %d\n", data.i); data.f = 220.5; printf( "data.f : %f\n", data.f); strcpy( data.str, "C Programming"); printf( "data.str : %s\n", data.str); return 0; } 💕💕❤❤ Memory Management de 
+                                                              <stdio.h>
+                                                                #include 
+                                                               <stdlib.h>
+                                                                 #include 
+                                                                <string.h>
+                                                                  int main() { char name[100]; char *description; strcpy(name, "Zara Ali"); /* allocate memory dynamically */ description = malloc( 200 * sizeof(char) ); if( description == NULL ) { fprintf(stderr, "Error - unable to allocate required memory\n"); } else { strcpy( description, "Zara ali a DPS student in class 10th"); } printf("Name = %s\n", name ); printf("Description: %s\n", description ); } stdio.h&gt; #include 
+                                                                 <stdlib.h>
+                                                                   #include 
+                                                                  <string.h>
+                                                                    int main() { char name[100]; char *description; strcpy(name, "Zara Ali"); /* allocate memory dynamically */ description = malloc( 30 * sizeof(char) ); if( description == NULL ) { fprintf(stderr, "Error - unable to allocate required memory\n"); } else { strcpy( description, "Zara ali a DPS student."); } /* suppose you want to store bigger description */ description = realloc( description, 100 * sizeof(char) ); if( description == NULL ) { fprintf(stderr, "Error - unable to allocate required memory\n"); } else { strcat( description, "She is in class 10th"); } printf("Name = %s\n", name ); printf("Description: %s\n", description ); /* release memory using free() function */ free(description); } 💞💕❤ File #include 
+                                                                   <stdio.h>
+                                                                     main() { FILE *fp; fp = fopen("/tmp/test.txt", "w+"); fprintf(fp, "This is testing for fprintf...\n"); fputs("This is testing for fputs...\n", fp); fclose(fp); } #include 
+                                                                    <stdio.h>
+                                                                      main() { FILE *fp; char buff[255]; fp = fopen("/tmp/test.txt", "r"); fscanf(fp, "%s", buff); printf("1 : %s\n", buff ); fgets(buff, 255, (FILE*)fp); printf("2: %s\n", buff ); fgets(buff, 255, (FILE*)fp); printf("3: %s\n", buff ); fclose(fp); } 💞💕❤ Error Handling #include 
+                                                                     <stdio.h>
+                                                                       #include 
+                                                                      <errno.h>
+                                                                        #include 
+                                                                       <string.h>
+                                                                         extern int errno ; int main () { FILE * pf; int errnum; pf = fopen ("unexist.txt", "rb"); if (pf == NULL) { errnum = errno; fprintf(stderr, "Value of errno: %d\n", errno); perror("Error printed by perror"); fprintf(stderr, "Error opening file: %s\n", strerror( errnum )); } else { fclose (pf); } return 0; } stdio.h&gt; #include 
+                                                                        <stdlib.h>
+                                                                          main() { int dividend = 20; int divisor = 0; int quotient; if( divisor == 0){ fprintf(stderr, "Division by zero! Exiting...\n"); exit(-1); } quotient = dividend / divisor; fprintf(stderr, "Value of quotient : %d\n", quotient ); exit(0); } io.h&gt; #include 
+                                                                         <stdlib.h>
+                                                                           main() { int dividend = 20; int divisor = 5; int quotient; if( divisor == 0) { fprintf(stderr, "Division by zero! Exiting...\n"); exit(EXIT_FAILURE); } quotient = dividend / divisor; fprintf(stderr, "Value of quotient : %d\n", quotient ); exit(EXIT_SUCCESS); } Recursion #
+                                                                          <stdio.h>
+                                                                            int fibonacci(int i) { if(i == 0) { return 0; } if(i == 1) { return 1; } return fibonacci(i-1) + fibonacci(i-2); } int main() { int i; for (i = 0; i &lt; 10; i++) { printf("%d\t\n", fibonacci(i)); } return 0; } 💞💕❤ Preprocessors #include 
+                                                                           <stdio.h>
+                                                                             int main() { printf("File :%s\n", __FILE__ ); printf("Date :%s\n", __DATE__ ); printf("Time :%s\n", __TIME__ ); printf("Line :%d\n", __LINE__ ); printf("ANSI :%d\n", __STDC__ ); } 
+                                                                           </stdio.h>
+                                                                          </stdio.h>
+                                                                         </stdlib.h>
+                                                                        </stdlib.h>
+                                                                       </string.h>
+                                                                      </errno.h>
+                                                                     </stdio.h>
+                                                                    </stdio.h>
+                                                                   </stdio.h>
+                                                                  </string.h>
+                                                                 </stdlib.h>
+                                                                </string.h>
+                                                               </stdlib.h>
+                                                              </stdio.h>
+                                                             </string.h>
+                                                            </string.h>
+                                                           </stdio.h>
+                                                          </string.h>
+                                                         </stdio.h>
+                                                        </string.h>
+                                                       </stdio.h>
+                                                      </string.h>
+                                                     </stdio.h>
+                                                    </stdio.h>
+                                                   </stdio.h>
+                                                  </stdio.h>
+                                                 </string.h>
+                                                </stdio.h>
+                                               </stdio.h>
+                                              </stdio.h>
+                                             </stdio.h>
+                                            </stdio.h>
+                                           </stdio.h>
+                                          </string.h>
+                                         </stdio.h>
+                                        </stdio.h>
+                                       </stdio.h>
+                                      </stdio.h>
+                                     </stdio.h>
+                                    </stdio.h>
+                                   </stdio.h>
+                                  </stdio.h>
+                                 </stdio.h>
+                                </stdio.h>
+                               </stdio.h>
+                              </stdio.h>
+                             </stdio.h>
+                            </stdio.h>
+                           </stdio.h>
+                          </stdio.h>
+                         </stdio.h>
+                        </stdio.h>
+                       </stdio.h>
+                      </stdio.h>
+                     </stdio.h>
+                    </stdio.h>
+                   </stdio.h>
+                  </stdio.h>
+                 </stdio.h>
+                </stdio.h>
+               </stdio.h>
+              </stdio.h>
+             </stdio.h>
+            </stdio.h>
+           </stdio.h>
+          </stdio.h>
+         </stdio.h>
+        </stdio.h>
+       </stdio.h>
+      </stdio.h>
+     </stdio.h>
+    </stdio.h>
+   </stdio.h>
+  </stdio.h>
+  <footer> 
+   <p class="programminghero">Learned and developed this site with <a href="http://www.programming-hero.com">Programming Hero</a></p> 
+  </footer>
+ </body>
+</html>
